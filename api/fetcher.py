@@ -7,7 +7,7 @@ ROOT_URL = settings.ROOT_URL
 
 def states_accessor():
     # Go through Doc API examples
-    url = f"https://opensky-network.org/api/states/all"
+    url = f"{ROOT_URL}/states/all"
     r = requests.get(url)
     if not r.ok:
         raise RuntimeError(r.json())
@@ -17,15 +17,15 @@ def states_accessor():
 def tracks_accessor():
     # From reading documentation, running this through is implied first!
     # flights_accessor()
-    url = f"https://opensky-network.org/api/tracks/all?icao24=a808c5&time=1641142800"
+    url = f"{ROOT_URL}/tracks/all?icao24=a808c5&time=1641142800"
     r = requests.get(url)
     if not r.ok:
         raise RuntimeError(r.json())
     # print(r.json())
     # BUT this is de-activated :(
 
-def flights_accessor():
-    url = f"https://opensky-network.org/api/flights/all?begin=1641142800&end=1641148800"
+def flights_accessor(*, start_time_unix_int: int, end_time_unix_int: int):
+    url = f"{ROOT_URL}/flights/all?begin={start_time_unix_int}&end={end_time_unix_int}"
     r = requests.get(url)
     if not r.ok:
         raise RuntimeError(r.json())
