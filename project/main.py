@@ -24,7 +24,10 @@ def main_wrapper():
     #4. Finish API fetcher. Also add some data folders in gitignore. Like data_to_ignore (with sample example) Also utils example
 
     #5. Fixed dataset
-    flight_list_fixed = aggregated.fixed_dataset()
+    # Example 1: Fixed
+    flight_list_fixed = aggregate.fixed_dataset()
+
+    # Example 2: Formed
 
 
     print("This is the end of our python project")

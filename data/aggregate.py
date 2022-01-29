@@ -1,6 +1,9 @@
 import pandas as pd
 from pathlib import Path
 
+def forming_dataset() -> pd.DataFrame:
+    pass
+
 def fixed_data_set() -> pd.DataFrame:
     flight_list = pd.concat(
         pd.read_csv(file, parse_dates=["firstseen", "lastseen", "day"])

@@ -1,4 +1,4 @@
-pip install pydantic
+
 from pydantic import BaseSettings
 
 class Settings(BaseSettings):
