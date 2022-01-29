@@ -21,7 +21,7 @@ def states_accessor():
 
 
 def flight_accessor():
-    url = f"{ROOT_URL}/api/flights/all"
+    url = f"{ROOT_URL}/api/flights/all?begin=164114"
     r = requests.get(url)
     if not r.ok:
         raise RuntimeError(r.json())
