@@ -1,5 +1,6 @@
 from api import fetcher
 from data import aggregate
+from project.config import settings
 
 # Let's start in main.py showing some wrapper patterns and depicting method attributes.
 # Explore with pushes and pulls and view on GitHub!
